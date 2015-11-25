@@ -1,12 +1,69 @@
 EXERCISE 8////////////////////////////////////////////////////////////////////////////////////////
 
-mysql> select Phone.subtype, count(*) from Phone join Entry on Phone.entryId = Entry.id where Entry.
-birthday between "1950-10-01" and "1960-10-01" group by subtype;
-+----------+----------+
-| subtype  | count(*) |
-+----------+----------+
-| landline |      170 |
-| cellular |      138 |
-| fax      |      134 |
-+----------+----------+
-3 rows in set (0.00 sec)
+mysql> select Account.email from Account join AddressBook on Account.id = AddressBook.accountId 
+join Entry on Entry.addressBookId= AddressBook.id join Phone on Phone.entryId = Entry.id where Phone.content not like '(%' group by Account.email;
+
++-------------------------------------------------------+
+| email                                                 |
++-------------------------------------------------------+
+| adipiscing.fringilla.porttitor@Quisqueac.edu          |
+| adipiscing@Sedetlibero.ca                             |
+| ante@nulla.edu                                    |
+| aptent@nequesedsem.edu                                |
+| bibendum@orciUtsemper.com                             |
+| blandit@nec.com                                       |
+| commodo@tincidunt.co.uk                               |
+| consectetuer.rhoncus.Nullam@temporloremeget.org       |
+| consectetuer.rhoncus@pedeacurna.net                   |
+| dapibus.quam@interdumligulaeu.ca                      |
+| diam.luctus.lobortis@ipsumac.ca                       |
+| dignissim.lacus@vel.ca                                |
+| Donec.vitae@Phasellusornare.org                       |
+| Duis.ac.arcu@ascelerisque.co.uk                       |
+| egestas.Fusce.aliquet@nec.edu                         |
+| est.ac@etmalesuadafames.ca                            |
+| et.ipsum.cursus@euaugue.com                           |
+| eu.metus@atlibero.co.uk                               |
+| eu@Crasvulputatevelit.com                             |
+| facilisis.non@vulputateullamcorpermagna.ca            |
+| iaculis.nec@magnaCrasconvallis.co.uk                  |
+| inceptos@dictummagna.org                              |
+| ipsum.Donec@tellus.ca                                 |
+| ipsum.non@Nullaeu.net                                 |
+| leo@temporloremeget.co.uk                             |
+| libero.lacus.varius@gravidaAliquamtincidunt.com       |
+| lobortis@elementumpurus.co.uk                         |
+| lorem@apurusDuis.edu                                  |
+| magna.Praesent@Lorem.ca                               |
+| magna.Sed.eu@duiSuspendisseac.edu                     |
+| mauris@placeratCrasdictum.net                         |
+| Morbi.neque@erat.org                                  |
+| Nam.consequat.dolor@nondapibusrutrum.ca               |
+| natoque@perinceptoshymenaeos.net                      |
+| nec.ligula@sedtortorInteger.com                       |
+| neque.vitae@enimcommodohendrerit.net                  |
+| non.justo.Proin@variuset.edu                          |
+| non@eget.com                                          |
+| nulla.vulputate@Nullamscelerisque.co.uk               |
+| Nunc.pulvinar.arcu@vel.ca                             |
+| orci.consectetuer.euismod@lacinia.com                 |
+| Phasellus.vitae@diamat.com                            |
+| porta@Vivamus.com                                     |
+| Praesent@miDuis.net                                   |
+| Proin.nisl@arcuMorbisit.net                           |
+| quam.dignissim.pharetra@sed.co.uk                     |
+| Quisque@Donec.net                                     |
+| ridiculus.mus@euismod.net                             |
+| semper.egestas.urna@ipsumSuspendissesagittis.ca       |
+| sit.amet.metus@orcilacus.net                          |
+| Suspendisse.non@nullavulputatedui.ca                  |
+| tincidunt.nibh.Phasellus@Inscelerisquescelerisque.net |
+| ultrices.sit@arcu.co.uk                               |
+| ultricies.adipiscing@cursusluctusipsum.co.uk          |
+| Ut.sagittis.lobortis@semperduilectus.net              |
+| ut@Integersemelit.org                                 |
+| Vestibulum.ante.ipsum@egestasblanditNam.net           |
+| vitae@tinciduntpede.com                               |
+| Vivamus.euismod.urna@anteNunc.net                     |
+| Vivamus.molestie@Infaucibus.org                       |
++-------------------------------------------------------+
