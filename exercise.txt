@@ -1,3 +1,37 @@
-EXERCISE 4////////////////////////////////////////////////////////////////////////////////////////
+EXERCISE 5////////////////////////////////////////////////////////////////////////////////////////
 
-mysql> select LCASE(firstName) from AddressBook join Entry on Entry.addressBookid= AddressBook.id where name= "Pharetra Ut Limited"\G  
+mysql> select AddressBook.id, ElectronicMail.content from ElectronicMail join Entry on Entry.id = ElectronicMail.entryId join AddressBook on AddressBook.Id = Entry.addressBookId where AddressBook.id = 100;                                                                                                                 
++-----+--------------------------------------------+
+| id  | content                                    |
++-----+--------------------------------------------+
+| 100 | tortor.dictum@Nulla.org                    |
+| 100 | malesuada.fames.ac@Sedeu.co.uk             |
+| 100 | velit@vestibulum.co.uk                     |
+| 100 | tincidunt.congue.turpis@Inmi.net           |
+| 100 | vitae.diam@sapienAeneanmassa.com           |
+| 100 | Nunc.ac@parturientmontesnascetur.com       |
+| 100 | cursus.vestibulum@pellentesqueSeddictum.ca |
+| 100 | nibh.Donec.est@nibh.org                    |
+| 100 | eu.tellus@ipsum.co.uk                      |
+| 100 | massa.Quisque.porttitor@enimSednulla.edu   |
+| 100 | mauris.blandit.mattis@Integersemelit.net   |
+| 100 | eget@viverraMaecenasiaculis.net            |
+| 100 | vulputate.posuere.vulputate@liberoDonec.ca |
+| 100 | Nam.tempor@nisimagna.co.uk                 |
+| 100 | tortor.dictum@Nulla.org                    |
+| 100 | malesuada.fames.ac@Sedeu.co.uk             |
+| 100 | velit@vestibulum.co.uk                     |
+| 100 | tincidunt.congue.turpis@Inmi.net           |
+| 100 | vitae.diam@sapienAeneanmassa.com           |
+| 100 | Nunc.ac@parturientmontesnascetur.com       |
+| 100 | cursus.vestibulum@pellentesqueSeddictum.ca |
+| 100 | nibh.Donec.est@nibh.org                    |
+| 100 | eu.tellus@ipsum.co.uk                      |
+| 100 | massa.Quisque.porttitor@enimSednulla.edu   |
+| 100 | mauris.blandit.mattis@Integersemelit.net   |
+| 100 | eget@viverraMaecenasiaculis.net            |
+| 100 | vulputate.posuere.vulputate@liberoDonec.ca |
+| 100 | Nam.tempor@nisimagna.co.uk                 |
++-----+--------------------------------------------+
+28 rows in set (0.01 sec)
+
