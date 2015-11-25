@@ -1,0 +1,156 @@
+EXERCISE 1////////////////////////////////////////////////////////////////////////////////////////
+
+mysql> select country, count(*) from Address group by country order by count(*) DESC;                                                                          
++----------------------------------------------+----------+
+| country                                      | count(*) |
++----------------------------------------------+----------+
+| Mozambique                                   |       18 |
+| Saint Helena, Ascension and Tristan da Cunha |       16 |
+| Thailand                                     |       15 |
+| Argentina                                    |       15 |
+| Andorra                                      |       15 |
+| United States Minor Outlying Islands         |       15 |
+| Canada                                       |       15 |
+| Lebanon                                      |       15 |
+| Wallis and Futuna                            |       15 |
+| Curaçao                                      |       15 |
+| Netherlands                                  |       14 |
+| United Arab Emirates                         |       14 |
+| Congo, the Democratic Republic of the        |       14 |
+| Brazil                                       |       14 |
+| United Kingdom (Great Britain)               |       14 |
+| Sri Lanka                                    |       14 |
+| Ethiopia                                     |       14 |
+| Dominica                                     |       14 |
+| Equatorial Guinea                            |       13 |
+| Venezuela                                    |       13 |
+| Cook Islands                                 |       13 |
+| Mayotte                                      |       13 |
+| Liberia                                      |       13 |
+| Norfolk Island                               |       13 |
+| Aruba                                        |       13 |
+| Switzerland                                  |       13 |
+| Lithuania                                    |       13 |
+| Tonga                                        |       13 |
+| French Polynesia                             |       13 |
+| Cocos (Keeling) Islands                      |       13 |
+| Slovakia                                     |       13 |
+| Seychelles                                   |       13 |
+| Jordan                                       |       12 |
+| Anguilla                                     |       12 |
+| Malaysia                                     |       12 |
+| Turkey                                       |       12 |
+| Senegal                                      |       12 |
+| Oman                                         |       12 |
+| Ireland                                      |       12 |
+| Virgin Islands, United States                |       12 |
+| Viet Nam                                     |        6 |
+| Sint Maarten                                 |        6 |
+| Libya                                        |        6 |
+| Angola                                       |        6 |
+| Svalbard and Jan Mayen Islands               |        6 |
+| Sweden                                       |        5 |
+| Montenegro                                   |        5 |
+| Haiti                                        |        5 |
+| Nauru                                        |        5 |
+| Liechtenstein                                |        5 |
+| Samoa                                        |        5 |
+| Palestine, State of                          |        5 |
+| Trinidad and Tobago                          |        5 |
+| Nepal                                        |        5 |
+| Hong Kong                                    |        5 |
+| Korea, South                                 |        5 |
+| Monaco                                       |        5 |
+| Jamaica                                      |        4 |
+| Saint Vincent and The Grenadines             |        3 |
+| Saudi Arabia                                 |        3 |
+| Iceland                                      |        3 |
+| Mauritius                                    |        3 |
+| Niger                                        |        2 |
++----------------------------------------------+----------+
+249 rows in set (0.00 sec)
+
+
+
+mysql> select LCASE(country), count(*) from Address group by country order by count(*) DESC;                                                                                 
++----------------------------------------------+----------+
+| LCASE(country)                               | count(*) |
++----------------------------------------------+----------+
+| mozambique                                   |       18 |
+| saint helena, ascension and tristan da cunha |       16 |
+| canada                                       |       15 |
+| argentina                                    |       15 |
+| lebanon                                      |       15 |
+| wallis and futuna                            |       15 |
+| curaçao                                      |       15 |
+| thailand                                     |       15 |
+| united states minor outlying islands         |       15 |
+| andorra                                      |       15 |
+| congo, the democratic republic of the        |       14 |
+| dominica                                     |       14 |
+| united kingdom (great britain)               |       14 |
+| sri lanka                                    |       14 |
+| ethiopia                                     |       14 |
+| united arab emirates                         |       14 |
+| netherlands                                  |       14 |
+| brazil                                       |       14 |
+| equatorial guinea                            |       13 |
+| switzerland                                  |       13 |
+| tonga                                        |       13 |
+| mayotte                                      |       13 |
+| slovakia                                     |       13 |
+| cocos (keeling) islands                      |       13 |
+| seychelles                                   |       13 |
+| norfolk island                               |       13 |
+| aruba                                        |       13 |
+| venezuela                                    |       13 |
+| lithuania                                    |       13 |
+| cook islands                                 |       13 |
+| french polynesia                             |       13 |
+| liberia                                      |       13 |
+| jordan                                       |       12 |
+| anguilla                                     |       12 |
+| malaysia                                     |       12 |
+| turkey                                       |       12 |
+| syria                                        |       12 |
+| virgin islands, united states                |       12 |
+| saint kitts and nevis                        |       12 |
+| isle of man                                  |       12 |
+| botswana                                     |       12 |
+| guinea                                       |       12 |
+| grenada                                      |       12 |
+| finland                                      |       12 |
+| senegal                                      |       12 |
+| oman                                         |       12 |
+| ireland                                      |       12 |
+| christmas island                             |       12 |
+| kazakhstan                                   |       12 |
+| guinea-bissau                                |       12 |
+| philippines                                  |       11 |
+| congo (brazzaville)                          |       11 |
+| burundi                                      |       11 |
+| denmark                                      |        6 |
+| sint maarten                                 |        6 |
+| moldova                                      |        6 |
+| paraguay                                     |        6 |
+| bolivia                                      |        6 |
+| sweden                                       |        5 |
+| palestine, state of                          |        5 |
+| liechtenstein                                |        5 |
+| nauru                                        |        5 |
+| nepal                                        |        5 |
+| hong kong                                    |        5 |
+| samoa                                        |        5 |
+| monaco                                       |        5 |
+| montenegro                                   |        5 |
+| haiti                                        |        5 |
+| trinidad and tobago                          |        5 |
+| korea, south                                 |        5 |
+| jamaica                                      |        4 |
+| saudi arabia                                 |        3 |
+| iceland                                      |        3 |
+| saint vincent and the grenadines             |        3 |
+| mauritius                                    |        3 |
+| niger                                        |        2 |
++----------------------------------------------+----------+
+249 rows in set (0.00 sec)
