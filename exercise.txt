@@ -1,3 +1,12 @@
-EXERCISE 7////////////////////////////////////////////////////////////////////////////////////////
+EXERCISE 8////////////////////////////////////////////////////////////////////////////////////////
 
-mysql> select content, substring_index(ElectronicMail.content,'@',-1) from ElectronicMail Group by substring_index(ElectronicMail.content,'@',-1);
+mysql> select Phone.subtype, count(*) from Phone join Entry on Phone.entryId = Entry.id where Entry.
+birthday between "1950-10-01" and "1960-10-01" group by subtype;
++----------+----------+
+| subtype  | count(*) |
++----------+----------+
+| landline |      170 |
+| cellular |      138 |
+| fax      |      134 |
++----------+----------+
+3 rows in set (0.00 sec)
